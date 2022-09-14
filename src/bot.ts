@@ -7,9 +7,7 @@ import { UserModel } from "./db/model/user.model";
 import { createExcel } from "./utils/excel";
 import { createUser, getIsAdmin, getUserAll } from "./utils/find";
 
-const bot = new Telegraf(ENV.TOKEN,{
- 
-});
+const bot = new Telegraf(ENV.TOKEN);
 
 
 export const botStarter = (instance, option, next)=>{
