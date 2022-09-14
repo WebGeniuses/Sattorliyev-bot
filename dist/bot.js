@@ -8,7 +8,7 @@ const telegraf_1 = require("telegraf");
 const config_1 = require("./config");
 const excel_1 = require("./utils/excel");
 const find_1 = require("./utils/find");
-const bot = new telegraf_1.Telegraf(config_1.ENV.TOKEN, {});
+const bot = new telegraf_1.Telegraf(config_1.ENV.TOKEN);
 bot.catch((e, ctx) => {
     console.log(e);
     ctx.reply("Agar botda xatolik bo'lsa   /start   tugmasin bosib yuboring");
