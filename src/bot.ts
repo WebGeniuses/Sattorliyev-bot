@@ -10,6 +10,13 @@ import { createUser, getIsAdmin, getUserAll } from "./utils/find";
 const bot = new Telegraf(ENV.TOKEN,{
  
 });
+
+
+export const botStarter = (instance, option, next)=>{
+  bot.launch()
+  next()
+}
+
 bot.catch((e,ctx)=>{
     console.log(e);
     ctx.reply("Agar botda xatolik bo'lsa   /start   tugmasin bosib yuboring")
@@ -110,8 +117,3 @@ bot.hears(/Skills/,ctx=>{
 })
 
 
-
-export const botStarter = (instance, option, next)=>{
-    bot.launch()
-    next()
-}
